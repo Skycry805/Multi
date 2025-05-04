@@ -12,10 +12,37 @@ body {
     background-color: rgb(176, 11, 14); 
     color: white;
   }
-  
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: relative;
+    padding: 10px 20px;
+    background-color: rgb(176, 11, 14); 
+    color: white;
+    width: 100%;
+    margin-top: auto;
+  }
+
   .logo img {
     height: 40px;
+    transition: transform 0.3s ease;
   }
+  
+  .logo img:hover {
+    animation: bounce 0.6s;
+  }
+  
+  /* Keyframes für Hüpfen */
+  @keyframes bounce {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-15px); }
+    50%  { transform: translateY(0); }
+    70%  { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+  }
+
 
   .welcome {
     font-size: 28px;

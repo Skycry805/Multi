@@ -1,0 +1,9 @@
+[
+    {
+      "id": 1,
+      "title": "Taco Deluxe",
+      "description": "Ein Taco voller Geschmack: Rindfleisch, Käse, Jalapeños und mehr.",
+      "image_url": "https://via.placeholder.com/400x300?text=Taco+Deluxe",
+      "seller_id": 1
+    }
+  ]

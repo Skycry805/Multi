@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {    /**laden der Daten nach laden der Website */
+document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach laden der Website */
     
     function loadArticles () {
         fetch('buyer.json')  /*URL der API*/
@@ -20,6 +20,10 @@ document.addEventListener("DOMContentLoaded", () => {    /**laden der Daten nach
                 <p class="product-description">${product.description}</p>
                 </div>
             `;
+
+            item.addEventListener('click', () => {
+                window.location.href = `product.html?id=${product.id}`;
+            });
             /*unten anhängen */
             list.appendChild(item);
             });
@@ -27,11 +31,11 @@ document.addEventListener("DOMContentLoaded", () => {    /**laden der Daten nach
         .catch(err => {
             console.error('Fehler beim Laden der Produkte:', err);
         });
-
     }
-
-
     loadArticles();
-
-    
   });
+
+
+
+  
+  
