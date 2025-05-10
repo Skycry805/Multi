@@ -20,15 +20,6 @@ body {
   .logo img:hover { /* Das Logo */
     animation: bounce 0.6s;
   }
-
-    .action-button{
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    padding: 0;
-  }
   @keyframes bounce { /* Keyframes für Hüpfen des Logos*/
     0%   { transform: translateY(0); }
     30%  { transform: translateY(-15px); }
@@ -42,7 +33,8 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
-   
+  
+ 
   }
   .search-input {
     width: 250px;   
@@ -55,7 +47,6 @@ body {
   .search-input:focus {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-
   .search-button {
     background-color: rgb(176, 11, 14);
     color: white;
@@ -75,6 +66,7 @@ body {
     background-color: rgb(150, 0, 0);
   }
 
+
   /* Benutzer Block */
   .user-block{
     justify-content: flex-end;
@@ -82,60 +74,47 @@ body {
     align-items: center;
     display: flex;
   }
-
   .user-info { /* Benutzer Infos */
     font-size: 14px;
   }
-
  .user-role  { /* Benutzer Infos */
     font-size: 13px;
     text-align: center;
     font-weight:bold;
     
+
   }
-.detail-layout {
-    padding: 20px;
-    display: flex; /* Flexbox verwenden */
-    flex-direction: column; /* Elemente untereinander anordnen */
-    align-items: center; /* Zentriert alle Kinder horizontal */
-    gap: 20px; /* Abstand von 20px zwischen den Elementen */
-}
-  
-.product-large-image {
-    background-color: white;
-    padding: 20px;
-    width: 100%; /* Bild passt sich der Containerbreite an */
-    max-width: 500px; /* Maximalbreite von 600px */
-    border-radius: 12px;
-}
-.add-to-cart {
-    padding: 10px 20px;
-    background-color: rgb(176, 11, 14);
-    color: white;
+  .action-button{
     border: none;
-    border-radius: 8px;
+    background: none;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-}
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    padding: 0;
+    
+  }
+  .action-button img {
+    width:35px;             
+    height: 35px;             
+    border-radius: 25px;      
+    transition: filter 0.3s ease;
+  }
 
-.add-to-cart {
-    background-color: rgb(150, 9, 11); /* Dunkleres Rot für Hover-Effekt */
-}
+ 
   
-.articel_box, .seller-box {
-    background-color: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    width: 100%; /* Boxen passen sich der Containerbreite an */
-    max-width: 500px; /* Maximalbreite für die Boxen */
-}
+  .main-content { /* Anzeigen */
+    padding: 2000px;
+  }
 
-.seller-box {
-    max-width: 500px; /* Maximalbreite für den Verkäuferbereich */
-}
+  .footer {/* Impressum */
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    padding: 10px 20px;
+    background-color: rgb(176, 11, 14); 
+    color: white;
+    width: 100%;
+    }
 
-.articel_box h1, .seller-box h2 {
-    margin-top: 0;
-}
