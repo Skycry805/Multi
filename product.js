@@ -38,20 +38,15 @@ document.addEventListener("DOMContentLoaded", async () => {
         console.error("Fehler beim Laden:", error);
     }
 
-    // 4. Dropdown-Menü Funktionalität
-    const dropdownButton = document.getElementById('dropdown-button');
-    const dropdownMenu = document.getElementById('dropdown-menu');
+});
 
-    // Event listener für das Öffnen und Schließen des Dropdowns
-    dropdownButton.addEventListener('click', function(event) {
-        event.stopPropagation(); // Verhindert, dass das Menü sofort geschlossen wird, wenn es angeklickt wird
-        dropdownMenu.classList.toggle('show'); // Toggle der Anzeige
-    });
+function toggleDropdown() {
+  document.getElementById("dropdown-menu").classList.toggle("show");
+}
 
-    // Schließt das Dropdown-Menü, wenn irgendwo außerhalb des Menüs geklickt wird
-    document.addEventListener('click', function(event) {
-        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.classList.remove('show');
-        }
-    });
+// Klick außerhalb schließt Dropdown
+window.addEventListener("click", function(event) {
+  if (!event.target.closest('.dropdown')) {
+    document.getElementById("dropdown-menu").classList.remove("show");
+  }
 });

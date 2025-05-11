@@ -20,6 +20,7 @@ body {
   .logo img:hover { /* Das Logo */
     animation: bounce 0.6s;
   }
+
   @keyframes bounce { /* Keyframes für Hüpfen des Logos*/
     0%   { transform: translateY(0); }
     30%  { transform: translateY(-15px); }
@@ -66,13 +67,20 @@ body {
     background-color: rgb(150, 0, 0);
   }
 
-  /* Benutzer Block */
-  .user-block{
-    justify-content: flex-end;
-    gap: 10px;
-    align-items: center;
-    display: flex;
-  }
+.user-block {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Weniger Abstand */
+  flex-shrink: 0; /* Verhindert dass der Block sich zu groß zieht */
+}
+
+.user-info-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
 
   .user-info { /* Benutzer Infos */
     font-size: 14px;
@@ -84,24 +92,66 @@ body {
     font-weight:bold;
     
   }
-  .action-button{
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    padding: 0;
-    
-  }
-  .action-button img {
-    width:35px;             
-    height: 35px;             
-    border-radius: 25px;      
-    transition: filter 0.3s ease;
-  } 
-  
- 
-  .product-list {
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+  right: 20px;
+  top: 60px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.dropdown-content a {
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.show {
+  display: block;
+}
+
+.action-button{
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: inline-block;
+  padding: 0;
+}
+
+
+.action-button img {
+  width:35px;             
+  height: 35px;             
+  border-radius: 25px;      
+  transition: filter 0.3s ease;
+} 
+
+.footer {/* Impressum */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  padding: 10px 20px;
+  background-color: rgb(176, 11, 14); 
+  color: white;
+  width: 100%;
+}
+
+
+.product-list {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -140,15 +190,3 @@ body {
     display: -webkit-box;
     -webkit-box-orient: vertical;
   }
-
-  .footer {/* Impressum */
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    padding: 10px 20px;
-    background-color: rgb(176, 11, 14); 
-    color: white;
-    width: 100%;
-    }

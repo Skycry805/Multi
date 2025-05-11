@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Alles Taco – Startseite</title>
+    <title>Alles Taco – Produkt</title>
     <link rel="stylesheet" href="product.css">
   </head>
 
@@ -19,26 +19,27 @@
         <button class="search-button">🌮</button>
       </div>
 
-      <div class="user-block"> <!--Benuter Informaitonen -->
-        
-        <div class="user-setting-block">
+      <div class="user-block"> 
+        <div class="user-info-block">
           <div class="user-info">
             Angemeldet als: Max Mustermann
           </div>
           <div class="user-role">
-             (Verkäufer-Konto)
+            (Verkäufer-Konto)
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="action-button" onclick="toggleDropdown()">
+            <img src="dein_bild.png" alt="ActionKnopf">
+          </button>
+          <div id="dropdown-menu" class="dropdown-content">
+            <a href="#">Warenkorb</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
           </div>
         </div>
       </div>
-      <button class="action-button">
-         <img src="dein_bild.png" alt="ActionKnopf">
-        <div id="dropdown-menu" class="dropdown-content">
-          <a href="#">Warenkorb</a>
-          <a href="#">Option 2</a>
-          <a href="#">Option 3</a>
-        </div>
-       </button>
-
     </header>
 
   <body>

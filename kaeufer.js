@@ -35,4 +35,17 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
     loadArticles();
   });
 
-  
+
+
+
+
+function toggleDropdown() {
+  document.getElementById("dropdown-menu").classList.toggle("show");
+}
+
+// Klick außerhalb schließt Dropdown
+window.addEventListener("click", function(event) {
+  if (!event.target.closest('.dropdown')) {
+    document.getElementById("dropdown-menu").classList.remove("show");
+  }
+});
