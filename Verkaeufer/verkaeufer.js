@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
             `;
 
             item.addEventListener('click', () => {
-                window.location.href = `verkaufProduct.html?articelid=${product.id}`;
+                window.location.href = `/editProduct/editProduct.html?articelid=${product.id}`;
             });
             /*unten anhängen */
             list.appendChild(item);
