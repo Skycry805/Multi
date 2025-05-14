@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach laden der Website */
     
     function loadArticles () {
-        fetch('buyer.json')  /*URL der API*/
+        fetch('/buyer.json')  /*URL der API*/
         .then(response => response.json())
         .then(data => {
             const list = document.getElementById('product-list');
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
             `;
 
             item.addEventListener('click', () => {
-                window.location.href = `product.html?id=${product.id}`;
+                window.location.href = `/Product/product.html?id=${product.id}`;
             });
             /*unten anhängen */
             list.appendChild(item);

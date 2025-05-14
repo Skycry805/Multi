@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     try {
         // 2. Holen der Produkt- und Verkäufer-Daten
         const [productRes, sellerRes] = await Promise.all([
-            fetch('articel.json'),
-            fetch('seller.json')
+            fetch('/articel.json'),
+            fetch('/seller.json')
         ]);
   
         const [products, sellers] = await Promise.all([

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Alles Taco – Produkt</title>
+    <link rel="stylesheet" href="/all.css">
+    <link rel="stylesheet" href="editProduct.css">
+  </head>
+
+  <body>
+    <header class="header"> <!-- Obere Leiste -->
+
+      <div class="logo">
+        <img src="/Bilder/taco_logo.png" alt="Alles Taco Logo">
+      </div>
+
+      <div class="search">
+          <input type="text" placeholder="Nach Artikeln suchen..." class="search-input">
+        <button class="search-button">🌮</button>
+      </div>
+
+      <div class="user-block"> 
+        <div class="user-info-block">
+          <div class="user-info">
+            Angemeldet als: Max Mustermann
+          </div>
+          <div class="user-role">
+            (Verkäufer-Konto)
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="action-button" onclick="toggleDropdown()">
+            <img src="/Bilder/dein_bild.png" alt="ActionKnopf">
+          </button>
+          <div id="dropdown-menu" class="dropdown-content">
+            <a href="/Warenkorb/warenkorb.html">Warenkorb</a>
+            <a href="#">Option 2</a>
+            <a href="#">Option 3</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content detail-layout">
+        <!-- Produktbild oder Upload-Feld -->
+            <div id="image-section">
+            <img id="product-image" src="" alt="Produktbild" style="max-width: 300px; display: none;">
+            
+                <div id="image-upload-container" style="display: none;">
+                    <label for="image-upload">Kein Bild vorhanden – Bild hochladen:</label><br>
+                    <input type="file" id="image-upload" accept="image/*"><br><br>
+                    <img id="preview" src="" style="max-width: 300px; display: none; border: 1px solid #ccc; border-radius: 8px; padding: 5px;">
+                </div>
+            </div>
+
+
+        <div class="articel_box">
+            <h1 id="product-title"></h1>
+            <p id="product-description"></p>
+        </div>
+
+        <div>
+        <button onclick="save()" class="add-to-cart">Speichern</button> 
+        </div>
+    </div>
+
+      <footer class="footer"> <!-- Impressum -->
+        <div>
+          <button class="impressum-button">
+          Impressum
+          </button>
+
+          <button class="AGB-button">
+            AGBs
+          </button>
+        </div>
+      </footer>
+    <script src="editProduct.js"></script>
+  </body>
+</html>
