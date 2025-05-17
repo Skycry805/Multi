@@ -1,3 +1,6 @@
+const params = new URLSearchParams(window.location.search);
+const productId = parseInt(params.get('id'), 10);
+
 document.addEventListener("DOMContentLoaded", async () => {
     // 1. Holen der Produkt-ID aus der URL
     const params = new URLSearchParams(window.location.search);
@@ -17,10 +20,8 @@ document.addEventListener("DOMContentLoaded", async () => {
             sellerRes.json()
         ]);
   
-        const product = products.find(p => p.id === productId);
-        if (!product) return;
-  
-        const seller = sellers.find(s => s.id === product.seller_id);
+        const product = products.find(p => p.id === productId);  
+        const seller = sellers.find(s => s.id === product.sellerId);
   
         // 3. Füllen der Produktinformationen im HTML
         document.getElementById('product-image').src = product.image_url;
@@ -28,17 +29,27 @@ document.addEventListener("DOMContentLoaded", async () => {
         document.getElementById('product-title').textContent = product.title;
         document.getElementById('product-description').textContent = product.description;
   
-        if (seller) {
-            document.getElementById('seller-name').textContent = `Name: ${seller.name}`;
-            document.getElementById('seller-rating').textContent = `Bewertung: ${seller.rating}`;
-            document.getElementById('seller-contact').textContent = `Kontakt: ${seller.contact}`;
-        }
+        document.getElementById('seller-name').textContent = seller.name;
+        document.getElementById('seller-rating').textContent = seller.rating;
+        document.getElementById('seller-contact').textContent = seller.contact;
+        
+        console.log(seller.name);
+        console.log(seller.rating);
+        console.log(seller.contact);
   
     } catch (error) {
         console.error("Fehler beim Laden:", error);
     }
 
 });
+
+function addToCart(){
+      const productData = {
+      warenkorbId: 1,
+      articelId: productId
+    };
+    console.log(productData);
+}
 
 function toggleDropdown() {
   document.getElementById("dropdown-menu").classList.toggle("show");

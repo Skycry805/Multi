@@ -75,7 +75,9 @@
 
 .seller-box {
     max-width: 500px; /* Maximalbreite für den Verkäuferbereich */
+    min-height: 100px;
 }
+
 
 .articel_box h1, .seller-box h2 {
   margin-top: 0;
