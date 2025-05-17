@@ -23,7 +23,6 @@
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     overflow: hidden;
-    cursor: pointer;
   }
   
   .product img {
@@ -47,7 +46,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-box-orient: vertical;
+    overflow-y: auto;
   }
 
 

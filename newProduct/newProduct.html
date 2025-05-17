@@ -47,35 +47,46 @@
 
             <form id="product-form">
 
-            <input type="file" id="image-upload" accept="image/*" required><br><br>
-            <img id="preview" src="" alt="Bildvorschau" style="max-width: 300px; display: none; border: 1px solid #ccc; padding: 5px; border-radius: 8px;">
-
-            <input type="text" id="title" placeholder="Titel eingeben..." required><br><br>
+            <input type="file" id="image-upload" accept="image/*" required>
+            <img id="preview" src="" alt="Bildvorschau">
             
-            <textarea id="description" placeholder="Beschreibung eingeben..." rows="6" required></textarea><br><br>
+            <h2>Titel:</h2>
 
-            <input type="number" id="price" step="0.01" min="0" placeholder="Preis in €" required><br><br>
+            <input type="text" id="title" placeholder="Titel eingeben..." required>
+            
+            <h2>Beschreibung:</h2>
 
-            <input type="number" id="amount" step="1" min="1" placeholder="Menge" required><br><br>
+            <textarea id="description" placeholder="Beschreibung eingeben..." rows="6" required></textarea>
 
-            <button type="submit">Speichern</button> 
-            </form>
+            <h2>Preis:</h2>
+
+            <input type="number" id="price" step="0.01" min="0" placeholder="Preis in €" required>
+
+            <h2>Menge:</h2>
+
+            <input type="number" id="amount" step="1" min="1" placeholder="Menge" required>
+            
+            <button type="submit" class="save-button">Speichern</button> 
+            
+          </form>
+
+            
     </div>
 
 </main>
 
 
-      <footer class="footer"> <!-- Impressum -->
-        <div>
-          <button class="impressum-button">
-          Impressum
-          </button>
+<footer class="footer"> <!-- Impressum -->
+      <div>
+        <button class="impressum-button" onclick="window.location.href='https://niclas-sieveneck.de/impressum/'">
+            Impressum
+        </button>
 
-          <button class="AGB-button">
-            AGBs
-          </button>
-        </div>
-      </footer>
+        <button class="impressum-button" onclick="window.location.href='https://niclas-sieveneck.de/datenschutz/'">
+            Datenschutz
+        </button>
+      </div>
+    </footer>
     <script src="newProduct.js"></script>
   </body>
 </html>

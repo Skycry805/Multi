@@ -15,7 +15,7 @@ document.getElementById('product-form').addEventListener('submit', function (eve
 
   const reader = new FileReader();
   reader.onload = function () {
-    const base64Image = reader.result;
+    const base64Image = reader.result
 
     const productData = {
       title: title,

@@ -7,21 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
             const list = document.getElementById('product-list');
     
 
-            if (data.length === 0) {
-                const message = document.createElement('div');
-                message.className = 'no-products-clickable';
-                message.innerHTML = `
-                    <p>Neue Produkte hinzufügen</p>
-                `;
-
-                message.addEventListener('click', () => {
-                    window.location.href = '/newProduct/newProduct.html';
-                });
-
-                list.innerHTML = ''; // Falls nötig: vorhandene Inhalte entfernen
-                list.appendChild(message);
-                return;
-            }
+    
 
             /*auslesen der JSON*/
             data.forEach(product => {
@@ -46,6 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
             /*unten anhängen */
             list.appendChild(item);
             });
+                const message = document.createElement('div');
+                message.className = 'no-products-clickable';
+                message.innerHTML = `
+                    <p>Neue Produkte hinzufügen</p>
+                `;
+
+                message.addEventListener('click', () => {
+                    window.location.href = '/newProduct/newProduct.html';
+                });
+
+                list.appendChild(message);
+                return;
         })
         .catch(err => {
             console.error('Fehler beim Laden der Produkte:', err);

@@ -48,7 +48,14 @@
 
                 <!Hier werden die Articel dynamisch hinzugefügt>
         </div>
-        
+
+        <aside id="total-price-block" class="total-price">
+          <h2>Gesamtsumme</h2>
+          <p id="total-price">0,00 €</p>
+
+          <button onclick=buy() class="buy-button">Kostenpflichtig bestellen</button>
+        </aside>
+              
         
         
 
@@ -56,17 +63,17 @@
         
     </main>
 
-      <footer class="footer"> <!-- Impressum -->
-        <div>
-          <button class="impressum-button">
-          Impressum
-          </button>
+<footer class="footer"> <!-- Impressum -->
+      <div>
+        <button class="impressum-button" onclick="window.location.href='https://niclas-sieveneck.de/impressum/'">
+            Impressum
+        </button>
 
-          <button class="AGB-button">
-            AGBs
-          </button>
-        </div>
-      </footer>
+        <button class="impressum-button" onclick="window.location.href='https://niclas-sieveneck.de/datenschutz/'">
+            Datenschutz
+        </button>
+      </div>
+    </footer>
     <script src="warenkorb.js"></script>
   </body>
 

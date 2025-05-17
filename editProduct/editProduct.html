@@ -43,40 +43,48 @@
       </div>
     </header>
 
-    <div class="main-content detail-layout">
-        <!-- Produktbild oder Upload-Feld -->
-            <div id="image-section">
-            <img id="product-image" src="" alt="Produktbild" style="max-width: 300px; display: none;">
+    <div class="detail-layout">
+            <form id="product-form">
+
+            <img id="preview" alt="Produktbild" width="300">
             
-                <div id="image-upload-container" style="display: none;">
-                    <label for="image-upload">Kein Bild vorhanden – Bild hochladen:</label><br>
-                    <input type="file" id="image-upload" accept="image/*"><br><br>
-                    <img id="preview" src="" style="max-width: 300px; display: none; border: 1px solid #ccc; border-radius: 8px; padding: 5px;">
-                </div>
-            </div>
 
+            <input type="file" id="image-upload" accept="image/*">
+            
+            <h2>Titel:</h2>
 
-        <div class="articel_box">
-            <h1 id="product-title"></h1>
-            <p id="product-description"></p>
-        </div>
+            <input type="text" id="product-title" required>
 
-        <div>
-        <button onclick="save()" class="add-to-cart">Speichern</button> 
-        </div>
+            <h2>Beschreibung:</h2>
+            
+            <textarea id="product-description" rows="6" required></textarea>
+
+            <h2>Preis:</h2>
+
+            <input type="number" id="product-price" step="0.01" min="0" required>
+
+            <h2>Menge:</h2>
+
+            <input type="number" id="product-amount" step="1" min="1" required>
+          
+            <button type="submit" class="save-button">Speichern</button> 
+
+          </form>
+
+          
     </div>
 
-      <footer class="footer"> <!-- Impressum -->
-        <div>
-          <button class="impressum-button">
-          Impressum
-          </button>
+<footer class="footer"> <!-- Impressum -->
+      <div>
+        <button class="impressum-button" onclick="window.location.href='https://niclas-sieveneck.de/impressum/'">
+            Impressum
+        </button>
 
-          <button class="AGB-button">
-            AGBs
-          </button>
-        </div>
-      </footer>
+        <button class="impressum-button" onclick="window.location.href='https://niclas-sieveneck.de/datenschutz/'">
+            Datenschutz
+        </button>
+      </div>
+    </footer>
     <script src="editProduct.js"></script>
   </body>
 </html>

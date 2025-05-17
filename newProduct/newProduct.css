@@ -17,3 +17,26 @@ textarea {
     gap: 20px; /* Abstand von 20px zwischen den Elementen */
     justify-content: center;
 }
+
+#preview {
+  max-width: 300px; 
+  display: none; 
+  border: 1px solid #ccc; 
+  padding: 5px; 
+  border-radius: 8px
+}
+
+form#product-form > * {
+  margin-bottom: 1rem; /* Abstand unten für alle direkte Kinder im Formular */
+}
+
+.save-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: rgb(176, 11, 14);
+  color: white;
+  font-size: 16px;
+}
+
