@@ -110,9 +110,56 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
     */
   }
 
-  function buy (){
 
+function closeModal() {
+  document.getElementById("review-modal").style.display = "none";
+}
+
+function bewerten() {
+  const selected = document.querySelector('input[name="verkaeufer"]:checked');
+  if (selected) {
+    const verkaeuferId = selected.value;
+    
+    window.location.href = `/Bewerten/bewerten.html?id=${verkaeuferId}`;
+  } else {
+    alert("Bitte wählen Sie einen Verkäufer aus.");
   }
+}
+
+function buy() {
+  const modal = document.getElementById("review-modal");
+  const auswahlContainer = document.getElementById("verkaeufer-auswahl");
+
+  // Alte Auswahl löschen
+  auswahlContainer.innerHTML = "";
+
+  // Eindeutige Verkäufer extrahieren (per Map)
+  const uniqueSellers = new Map();
+
+  productsData.forEach(product => {
+    if (!uniqueSellers.has(product.sellerid)) {
+      uniqueSellers.set(product.sellerid, product.seller);
+    }
+  });
+
+  // Dynamisch Radio-Buttons erzeugen
+  uniqueSellers.forEach((seller, id) => {
+    const label = document.createElement("label");
+    label.innerHTML = `
+      <input type="radio" name="verkaeufer" value="${id}">
+      ${seller}
+    `;
+    auswahlContainer.appendChild(label);
+  });
+
+  // Modal anzeigen
+  modal.style.display = "block";
+}
+
+function startseite() {
+  window.location.href = "/Kaeufer/kaeufer.html";
+}
+
 
 
 function toggleDropdown() {

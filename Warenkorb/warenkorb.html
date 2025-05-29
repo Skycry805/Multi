@@ -55,7 +55,19 @@
 
           <button onclick=buy() class="buy-button">Kostenpflichtig bestellen</button>
         </aside>
-    </main>
+
+    <div id="review-modal" class="modal">
+      <div class="modal-content">
+        <h2>Vielen Dank für Ihre Bestellung!</h2>
+        <p>Möchten Sie den Verkäufer bewerten?</p>
+        <form id="verkaeufer-auswahl">
+
+        </form>
+        <button onclick="bewerten()" class="review-button">Verkäufer bewerten</button>
+        <button onclick="startseite()" class="home-button">Nicht bewerten</button>
+      </div>
+    </div>
+  </main>
 
 <footer class="footer"> <!-- Impressum -->
       <div>

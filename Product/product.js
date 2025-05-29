@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         // 3. Füllen der Produktinformationen im HTML
         document.getElementById('product-image').src = product.image_url;
         document.getElementById('product-image').alt = product.title;
-        document.getElementById('preis').textContent = "Preis: " + product.price + "€";
+        document.getElementById('preis').textContent = "Preis: " + product.price.replace(".",",") + "€";
         document.getElementById('product-title').textContent = product.title;
         document.getElementById('product-description').textContent = product.description;
   
