@@ -90,7 +90,24 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
       articelId:id
     };
     console.log(productData)
-    return productsData;
+    
+        // Optional: Senden an eine REST-API
+    /*
+    fetch('https://dein-server.de/api/produkte', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(productData)
+    })
+    .then(response => response.json())
+    .then(data => {
+      console.log('Gespeichert:', data);
+    })
+    .catch(error => {
+      console.error('Fehler beim Senden:', error);
+    });
+    */
   }
 
   function buy (){

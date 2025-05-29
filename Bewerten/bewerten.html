@@ -3,9 +3,9 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Alles Taco – Warenkorb</title>
+    <title>Alles Taco – Produkt</title>
     <link rel="stylesheet" href="/all.css">
-    <link rel="stylesheet" href="warenkorb.css">
+    <link rel="stylesheet" href="bewerten.css">
   </head>
 
   <body>
@@ -35,27 +35,43 @@
             <img src="/Bilder/dein_bild.png" alt="ActionKnopf">
           </button>
           <div id="dropdown-menu" class="dropdown-content">
-            <a href="Warenkorb/warenkorb.html">Warenkorb</a>
+            <a href="/Warenkorb/warenkorb.html">Warenkorb</a>
             <a href="/Verkaeufer/verkaeufer.html">Verkäufer</a>
             <a href="/Kaeufer/kaeufer.html">Käufer</a>
           </div>
         </div>
       </div>
     </header>
+<main>
 
-    <main>
-        <div class="product-card" id="product-card">
+    <div class="detail-layout">
+        <h2 id="verkaeuferName"></h2>
 
-                <!Hier werden die Articel dynamisch hinzugefügt>
-        </div>
+            <form id="bewerten-form">
 
-        <aside id="total-price-block" class="total-price">
-          <h2>Gesamtsumme</h2>
-          <p id="total-price">0,00 €</p>
+            <h2>Sternebewertung:</h2>
+            <div class="sterne-bewertung" id="sterne-container">
+            <span data-wert="1">★</span>
+            <span data-wert="2">★</span>
+            <span data-wert="3">★</span>
+            <span data-wert="4">★</span>
+            <span data-wert="5">★</span>
+            </div>
+            <input type="hidden" id="sterne-wert" name="sterne" required>
+            
+            <h2>Kommentar:</h2>
 
-          <button onclick=buy() class="buy-button">Kostenpflichtig bestellen</button>
-        </aside>
-    </main>
+            <textarea id="description" placeholder="Beschreibung eingeben..." rows="6" required></textarea>
+            
+            <button type="submit" class="save-button">Speichern</button> 
+            
+          </form>
+
+            
+    </div>
+
+</main>
+
 
 <footer class="footer"> <!-- Impressum -->
       <div>
@@ -68,10 +84,8 @@
         </button>
       </div>
     </footer>
-    <script src="warenkorb.js"></script>
+    <script src="bewerten.js"></script>
   </body>
-
-
-
-
 </html>
+
+

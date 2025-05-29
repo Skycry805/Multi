@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {    /*laden der Daten nach 
                 const message = document.createElement('div');
                 message.className = 'no-products-clickable';
                 message.innerHTML = `
-                    <p>Neue Produkte hinzufügen</p>
+                    <p>Neue Produkte hinzufügen <span class="plus-icon">+</span> </p>
                 `;
 
                 message.addEventListener('click', () => {

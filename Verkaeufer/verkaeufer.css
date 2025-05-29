@@ -2,9 +2,7 @@
   padding: 20px;
   max-width: 500px;
   text-align: center;
-  border: 2px solid #000000;
   border-radius: 10px;
-  color: #333;
   background-color: #ffffff;
   cursor: pointer;
 }
@@ -47,6 +45,11 @@
     text-overflow: ellipsis;
     display: -webkit-box;
     overflow-y: auto;
+  }
+
+  .plus-icon {
+    font-size: 30px;
+    font-weight: bold;
   }
 
 

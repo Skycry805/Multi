@@ -76,6 +76,7 @@
 .seller-box {
     max-width: 500px; /* Maximalbreite für den Verkäuferbereich */
     min-height: 100px;
+    cursor: pointer;
 }
 
 

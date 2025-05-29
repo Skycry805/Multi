@@ -3,9 +3,9 @@
 
   <head>
     <meta charset="UTF-8">
-    <title>Alles Taco – Warenkorb</title>
+    <title>Alles Taco – Produkt</title>
     <link rel="stylesheet" href="/all.css">
-    <link rel="stylesheet" href="warenkorb.css">
+    <link rel="stylesheet" href="seller.css">
   </head>
 
   <body>
@@ -35,7 +35,7 @@
             <img src="/Bilder/dein_bild.png" alt="ActionKnopf">
           </button>
           <div id="dropdown-menu" class="dropdown-content">
-            <a href="Warenkorb/warenkorb.html">Warenkorb</a>
+            <a href="/Warenkorb/warenkorb.html">Warenkorb</a>
             <a href="/Verkaeufer/verkaeufer.html">Verkäufer</a>
             <a href="/Kaeufer/kaeufer.html">Käufer</a>
           </div>
@@ -44,18 +44,19 @@
     </header>
 
     <main>
-        <div class="product-card" id="product-card">
+        <div class="detail-layout">
+            <div id="seller-box" class="seller-box">
+                <h2>Verkäufer</h2>
+                <p id="seller-name" class="seller"></p>
+                <p id="seller-rating" class="seller"></p>
+                <p id="seller-contact" class="seller"></p>
+            </div>
 
-                <!Hier werden die Articel dynamisch hinzugefügt>
-        </div>
+            <div id="bewertung-list" class="bewertung-liste"></div>
+      </div>
 
-        <aside id="total-price-block" class="total-price">
-          <h2>Gesamtsumme</h2>
-          <p id="total-price">0,00 €</p>
-
-          <button onclick=buy() class="buy-button">Kostenpflichtig bestellen</button>
-        </aside>
     </main>
+
 
 <footer class="footer"> <!-- Impressum -->
       <div>
@@ -68,7 +69,7 @@
         </button>
       </div>
     </footer>
-    <script src="warenkorb.js"></script>
+    <script src="seller.js"></script>
   </body>
 
 

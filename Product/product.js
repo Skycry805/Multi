@@ -26,17 +26,19 @@ document.addEventListener("DOMContentLoaded", async () => {
         // 3. Füllen der Produktinformationen im HTML
         document.getElementById('product-image').src = product.image_url;
         document.getElementById('product-image').alt = product.title;
+        document.getElementById('preis').textContent = "Preis: " + product.price + "€";
         document.getElementById('product-title').textContent = product.title;
         document.getElementById('product-description').textContent = product.description;
   
-        document.getElementById('seller-name').textContent = seller.name;
-        document.getElementById('seller-rating').textContent = seller.rating;
-        document.getElementById('seller-contact').textContent = seller.contact;
+        document.getElementById('seller-name').textContent = "Name: " + seller.name;
+        document.getElementById('seller-rating').textContent = "Bewertung: " + seller.rating;
+        document.getElementById('seller-contact').textContent = "Email: " + seller.contact;
+
+        const sellerBox = document.getElementById("seller-box");
+        sellerBox.addEventListener('click', () => {
+          window.location.href = `/Seller/seller.html?id=${seller.id}`;
+        });
         
-        console.log(seller.name);
-        console.log(seller.rating);
-        console.log(seller.contact);
-  
     } catch (error) {
         console.error("Fehler beim Laden:", error);
     }
